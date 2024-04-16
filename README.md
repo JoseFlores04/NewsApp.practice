@@ -11,7 +11,7 @@ This _**NewsApp.practice**_ project is a simple program for getting News using t
 ## Installation
 
 It is not necessary to install it in an special way. It is only needed to download to a wanted environment where **Python** can be used. 
-It is recommended to be open __VSCode__ to be tested. 
+It is recommended to be open on __VSCode__ to be tested. 
   
 
 ## Usage

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Search</title>
+</head>
+<body>
+    <h1>News Search</h1>
+    <form method="post">
+        <label for="query">Enter search query:</label>
+        <input type="text" id="query" name="query" required>
+        <button type="submit">Search</button>
+    </form>
+    {% if articles %}
+        <h2>News Articles</h2>
+        <ul>
+            {% for article in articles %}
+                <li>
+                    <strong>{{ article.title }}</strong><br>
+                    <em>Source: {{ article.source.name }}</em><br>
+                    {{ article.description }}<br>
+                    <a href="{{ article.url }}" target="_blank">Read more</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No articles found.</p>
+    {% endif %}
+</body>
+</html>
